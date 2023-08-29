@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #06021b;
+}
+
+.navigation{
+    position: fixed;
+    top: 7.5%;
+    width: 100%;
+    height: 65px;
+    background: linear-gradient(65deg, #2f6cfa, #99b2f2);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
+}
+
+.navigation::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .3), transparent);
+    transition: .5s;
+}
+
+.navigation:hover::before{
+    left: 100%;
+}
+
+.navigation ul {
+    display: flex;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    list-style: none;
+    z-index: 1;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+.navigation ul li a .icon {
+position: relative;
+display: block;
+line-height: 70px;
+font-size: 1.5em;
+color: #fff;
+transition: 0.5s;
+}
+
+.navigation ul li.active a .icon {
+    transform: translateY(-33px);
+}
+
+.navigation ul li a .text {
+    position: absolute;
+    color: #fff;
+    font-size: .75em;
+    letter-spacing: .05em;
+    font-weight: 400;
+    transform: translateY(18px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.navigation ul li.active a .text {
+    opacity: 1;
+}
+
+.indicador{
+    position: absolute;
+    top: -50%;
+    width: 65px;
+    height: 65px;
+    background: linear-gradient(65deg, #3e75f4, #5d8af3);
+    border: 5px solid #06021b;
+    transition: 0.5s;
+}
+
+.navigation ul li:nth-child(1).active~ .indicador{
+    left: 5px;
+    transform: rotate(45deg);
+}
+
+.navigation ul li:nth-child(2).active~ .indicador{
+    left: 75px;
+    transform: rotate(135deg);
+}
+
+.navigation ul li:nth-child(3).active~ .indicador{
+    left: 145px;
+    transform: rotate(225deg);
+}
+
+.navigation ul li:nth-child(4).active~ .indicador{
+    left: 215px;
+    transform: rotate(315deg);
+}
+
+.navigation ul li:nth-child(5).active~ .indicador{
+    left: 285px;
+    transform: rotate(405deg);
+}
