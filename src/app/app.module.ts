@@ -8,8 +8,8 @@ import { BarraComponent } from './barra/barra.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BarraComponent
-  ],
+    BarraComponent,
+ ],
   imports: [
     BrowserModule,
     AppRoutingModule
