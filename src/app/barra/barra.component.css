@@ -6,17 +6,18 @@
 }
 
 body{
-    display: flex;
+    
+    margin: 0;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; 
     background-image: url(portada.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     animation: movimiento 10s infinite linear alternate;
-   }
+}
    
 @keyframes movimiento {
     from{
@@ -32,9 +33,9 @@ background-position: top;
     left: 0;
     width: 100%; 
     height: 100%;
-    background-color: rgba(143, 144, 146, 0.5);
+    background-color: rgba(#333, 10);
     z-index:0;
-}
+}  
 
 .navigation{
     position: fixed;
@@ -47,6 +48,7 @@ background-position: top;
     align-items: center;
     backdrop-filter: blur(10px);
     border-bottom: 2px solid rgba(255, 255, 255, .2);
+    z-index: 2;
 }
 
 .navigation::before{
@@ -150,3 +152,170 @@ transition: 0.5s;
     left: 285px;
     transform: rotate(405deg);
 }
+
+@media (max-width: 768px) {
+     }
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    width: 100%; 
+    padding-left: 240px; 
+    box-sizing: border-box;
+    padding-right: 20px;
+    padding-top: 300px;
+ }
+
+.maincontainer {
+
+width: 250px;
+height: 320px;
+background: none;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+flex-wrap: wrap;
+
+}
+
+.maincontainer1 {
+
+    width: 250px;
+    height: 320px;
+    background: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-wrap: wrap;
+    }
+
+    .maincontainer2 {
+
+        width: 250px;
+        height: 320px;
+        background: none;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-wrap: wrap;
+                }
+
+        .maincontainer3 {
+
+            width: 250px;
+            height: 320px;
+            background: none;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            flex-wrap: wrap;
+            }
+
+            .maincontainer4 {
+                
+                width: 250px;
+                height: 320px;
+                background: none;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                flex-wrap: wrap;
+                }
+
+                .maincontainer5 {
+                    
+                    width: 250px;
+                    height: 320px;
+                    background: none;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    flex-wrap: wrap;
+                    }
+
+                    .maincontainer6 {
+                    
+                        width: 250px;
+                        height: 320px;
+                        background: none;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        flex-wrap: wrap;
+                        }
+
+                        
+.thecard {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
+    margin-bottom: 20px;
+  }
+  
+.thecard:hover {
+    transform: rotateY(180deg);
+  }
+  
+.thefront {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: #000;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 3px solid rgba(0, 0, 0, 0.3);
+  }
+  
+  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  .theback {
+   position: absolute;
+   top: 0;
+   left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+    color: #333;
+    text-align: center;
+    transform: rotateY(180deg);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    }  
+  
+    /* This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
+  .thefront h1,
+  .theback h1 {
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .thefront p,
+  .theback p {
+    font-family: 'zilla slab', sans-serif;
+    padding: 30px;
+    font-weight: normal;
+    font-size: 12px;
+    text-align: center;
+  }
+  
