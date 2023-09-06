@@ -1,2 +1,20 @@
-<app-barra></app-barra>
-
+<body>
+    <div class="capa"></div>
+     <div class="navigation">
+      <ul>
+        <li *ngFor="let item of items; let i = index" class="list" [ngClass]="{ active: i === activeIndex }" (click)="setActive(i)">
+          <a [routerLink]="item.route">
+            <span class="icon"><i [class]="item.icon"></i></span>
+            <span class="text">{{ item.text }}</span>
+          </a>
+        </li>
+        <div class="capa"></div>
+        <div class="indicador"></div>
+      </ul>
+    </div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <router-outlet></router-outlet>
+  
+  
+ 

@@ -34,124 +34,8 @@ background-position: top;
     width: 100%; 
     height: 100%;
     background-color: rgba(#333, 10);
-    z-index:0;
+
 }  
-
-.navigation{
-    position: fixed;
-    top: 7.5%;
-    width: 100%;
-    height: 65px;
-    background: linear-gradient(65deg, #2f6cfa, #99b2f2);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid rgba(255, 255, 255, .2);
-    z-index: 2;
-}
-
-.navigation::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .3), transparent);
-    transition: .5s;
-}
-
-.navigation:hover::before{
-    left: 100%;
-}
-
-.navigation ul {
-    display: flex;
-    width: 100%;
-}
-
-.navigation ul li {
-    position: relative;
-    width: 70px;
-    height: 70px;
-    list-style: none;
-    z-index: 1;
-}
-
-.navigation ul li a {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    font-weight: 500;
-}
-
-.navigation ul li a .icon {
-position: relative;
-display: block;
-line-height: 70px;
-font-size: 1.5em;
-color: #fff;
-transition: 0.5s;
-}
-
-.navigation ul li.active a .icon {
-    transform: translateY(-33px);
-}
-
-.navigation ul li a .text {
-    position: absolute;
-    color: #fff;
-    font-size: .75em;
-    letter-spacing: .05em;
-    font-weight: 400;
-    transform: translateY(18px);
-    opacity: 0;
-    transition: .5s;
-}
-
-.navigation ul li.active a .text {
-    opacity: 1;
-}
-
-.indicador{
-    position: absolute;
-    top: -50%;
-    width: 65px;
-    height: 65px;
-    background: linear-gradient(65deg, #3e75f4, #5d8af3);
-    border: 5px solid #06021b;
-    transition: 0.5s;
-}
-
-.navigation ul li:nth-child(1).active~ .indicador{
-    left: 5px;
-    transform: rotate(45deg);
-}
-
-.navigation ul li:nth-child(2).active~ .indicador{
-    left: 75px;
-    transform: rotate(135deg);
-}
-
-.navigation ul li:nth-child(3).active~ .indicador{
-    left: 145px;
-    transform: rotate(225deg);
-}
-
-.navigation ul li:nth-child(4).active~ .indicador{
-    left: 215px;
-    transform: rotate(315deg);
-}
-
-.navigation ul li:nth-child(5).active~ .indicador{
-    left: 285px;
-    transform: rotate(405deg);
-}
 
 @media (max-width: 768px) {
      }
@@ -279,7 +163,7 @@ flex-wrap: wrap;
     border: 3px solid rgba(0, 0, 0, 0.3);
   }
   
-  /* THE BACK FACE OF THE CARD, WHICH SHOWS ON MOUSEOVER */
+  
   .theback {
    position: absolute;
    top: 0;
@@ -289,29 +173,30 @@ flex-wrap: wrap;
     border-radius: 10px;
     backface-visibility: hidden;
     overflow: hidden;
-    color: #333;
+    color: #000;
     text-align: center;
     transform: rotateY(180deg);
     background: rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     box-shadow: 0 5px 10px rgba(0, 0, 0);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    
+    
     border: 3px solid rgba(0, 0, 0, 0.3);
     }  
   
-    /* This block (starts here) is merely styling for the flip card, and is NOT an essential part of the flip code */
-  .thefront h1,
+.thefront h1,
   .theback h1 {
     font-family: 'zilla slab', sans-serif;
     padding: 30px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 28px;
     text-align: center;
+    font-weight: bolder;
+    -webkit-text-stroke-color: #000, .5;    
+    -webkit-text-stroke-width: .05px;
   }
   
-  .thefront p,
-  .theback p {
+ .theback p {
     font-family: 'zilla slab', sans-serif;
     padding: 30px;
     font-weight: normal;
