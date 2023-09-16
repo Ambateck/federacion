@@ -1,1 +1,21 @@
-<p>certificadas works!</p>
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="certificadas.component.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Formulario con Inputs y Checkbox</h2>
+            <form>
+              <div class="form-group" *ngFor="let item of items; let i = index">
+                <input type="checkbox" [id]="'checkbox' + i" [name]="'checkbox' + i" [(ngModel)]="items[i].checked"/>
+                <label for="checkbox{{i}}">{{i + 1}}</label>
+              </div>
+          
+              <button type="submit">Enviar</button>
+            </form>
+          </div>
+          
+</body>
+</html>

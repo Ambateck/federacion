@@ -9,6 +9,7 @@ import { MiembrosComponent } from './miembros/miembros.component';
 import { ConveniosComponent } from './convenios/convenios.component';
 import { QuienesComponent } from './quienes/quienes.component';
 import { RouterModule, Routes } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const rutas:Routes=[
   { path:'', component:BarraComponent },
@@ -31,6 +32,8 @@ const rutas:Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(rutas)
   ],
   exports: [RouterModule],

@@ -10,6 +10,7 @@ import { AyudaComponent } from './utilidades/ayuda/ayuda.component';
 import { BitacoraComponent } from './utilidades/bitacora/bitacora.component';
 import { EmpleosComponent } from './utilidades/empleos/empleos.component';
 import { ErroresComponent } from './utilidades/errores/errores.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ErroresComponent } from './utilidades/errores/errores.component';
   ],
   imports: [
     CommonModule,
-    HerramientasRoutingModule
+    HerramientasRoutingModule,
+    FormsModule
   ]
 })
 export class HerramientasModule { }
